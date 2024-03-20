@@ -1,3 +1,15 @@
+variable "access_key" {
+  type = string
+}
+
+variable "secret_key" {
+  type = string
+}
+
+variable "region" {
+  type = string
+}
+
 variable "subnet" {
   type = map(object({
     subnet_cidr = string
