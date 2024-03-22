@@ -18,3 +18,12 @@ variable "subnet" {
     az = string
   }))
 }
+
+variable "create_route_table" {
+  default = true
+}
+
+variable "route_table_name" {
+  type = string
+  default = null
+}
