@@ -9,8 +9,8 @@ module "vpc" {
   version = "1.0.0"
   # insert required variables here
 
-  vpc_cidr = "10.5.0.0/16"
-  vpc_name = "module-test-vpc"
+  vpc_cidr = var.vpc_cidr
+  vpc_name = var.vpc_name
 }
 
 module "subnets" {
