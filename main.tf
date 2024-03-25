@@ -21,3 +21,9 @@ module "subnets" {
   create_route_table = var.create_route_table
   route_table_name = var.route_table_name
 }
+
+module "route-association" {
+  source  = "app.terraform.io/Enterprise_Test/route-association/aws"
+  version = "1.0.0"
+  # insert required variables here
+}
