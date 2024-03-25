@@ -26,4 +26,6 @@ module "route-association" {
   source  = "app.terraform.io/Enterprise_Test/route-association/aws"
   version = "1.0.0"
   # insert required variables here
+  route_table_id = module.subnets.route_table_id.0
+  subnet_id = module.subnets.subnet_id
 }
