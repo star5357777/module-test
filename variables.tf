@@ -35,3 +35,11 @@ variable "route_table_name" {
   type = string
   default = null
 }
+
+variable "sg_name" {
+  type = string
+}
+
+variable "sg_tag_name" {
+  type = string
+}
