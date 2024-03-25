@@ -5,16 +5,15 @@ provider "aws" {
 }
 
 module "vpc" {
-  source  = "app.terraform.io/example-org-3f1fdf/vpc/aws"
+  source  = "app.terraform.io/Enterprise_Test/vpc/aws"
   version = "1.0.0"
   # insert required variables here
-
   vpc_cidr = var.vpc_cidr
   vpc_name = var.vpc_name
 }
 
 module "subnets" {
-  source  = "app.terraform.io/example-org-3f1fdf/subnets/aws"
+  source  = "app.terraform.io/Enterprise_Test/subnets/aws"
   version = "1.0.0"
   # insert required variables here
   vpc_id = module.vpc.vpc_id
