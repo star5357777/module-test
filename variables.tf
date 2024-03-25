@@ -44,10 +44,6 @@ variable "sg_tag_name" {
   type = string
 }
 
-variable "sg_id" {
-  type = string
-}
-
 variable "sg_rule" {
   type = map(object({
     type         = string
