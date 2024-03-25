@@ -38,3 +38,11 @@ module "security-group" {
   sg_name = var.sg_name
   sg_tag_name = var.sg_tag_name
 }
+
+module "security-rule" {
+  source  = "app.terraform.io/Enterprise_Test/security-rule/aws"
+  version = "1.0.0"
+  # insert required variables here
+  sg_id = module.security-group.sg_id
+  sg_rule = var.sg_rule
+}
