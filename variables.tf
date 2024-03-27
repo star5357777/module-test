@@ -64,7 +64,7 @@ variable "az" {
   type = string
 }
 
-variable "ec2_type" {
+variable "ec2_name" {
   type = string
 }
 
@@ -72,10 +72,10 @@ variable "key_name" {
   type = string
 }
 
-variable "subnet_id" {
+variable "ec2_type" {
   type = string
 }
 
-variable "sg_id" {
-  type = string
+variable "subnet_number" {
+  type = any
 }
