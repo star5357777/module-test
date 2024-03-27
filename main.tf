@@ -55,6 +55,6 @@ module "ec2-only" {
   az = var.az
   ec2_type = var.ec2_type
   key_name = var.key_name
-  sg_id = module.security-group.sg_id
-  subnet_id = module.subnets.subnet_id.0
+  sg_id = var.sg_id
+  subnet_id = var.subnet_id
 }
