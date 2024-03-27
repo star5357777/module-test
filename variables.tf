@@ -63,6 +63,9 @@ variable "nic_info" {
 		sg_id = string
 		subnet_id_idx = number
 	}))
+	default = {
+		subnet_id = module.subnets.subnet_id
+	}
 }
 
 variable "ebs_info" {
@@ -99,6 +102,10 @@ variable "nic_attachment_info" {
 		nic_attachment_ec2_idx = number
 		nic_attachment_nic_idx = number
 	}))
+	default = {
+		nic_id = module.ec2.nic_id
+		nic_ec2_id = module.ec2.ec2_id
+	}
 }
 
 
@@ -111,5 +118,9 @@ variable "ebs_attachment" {
 		ebs_attachment_ebs_idx = number
 		ebs_attachment_ec2_idx = number
 	}))
+	default = {
+		ebs_id = module.ec2.ebs_id
+		ebs_ec2_id = module.ec2.ec2_id
+	}
 }
 
