@@ -46,3 +46,15 @@ module "security-rule" {
   sg_id = module.security-group.sg_id
   sg_rule = var.sg_rule
 }
+
+module "ec2-only" {
+  source  = "app.terraform.io/Enterprise_Test/ec2-only/aws"
+  version = "1.0.0"
+  # insert required variables here
+  ami = var.ami
+  az = var.az
+  ec2_type = var.ec2_type
+  key_name = var.key_name
+  sg_id = var.sg_id
+  subnet_id = var.subnet_id
+}
