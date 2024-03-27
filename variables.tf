@@ -58,7 +58,7 @@ variable "sg_rule" {
 
 variable "nic_info" {
 	type = map(object({
-		subnet_id = any
+		subnet_id = module.subnets.subnet_id
 		private_ip = string
 		sg_id = string
 		subnet_id_idx = number
@@ -93,8 +93,8 @@ variable "ec2" {
 
 variable "nic_attachment_info" {
 	type = map(object({
-		nic_ec2_id = any
-		nic_id = any
+		nic_ec2_id = module.ec2.ec2_id
+		nic_id = module.ec2.nic_id
 		nic_index = number
 		nic_attachment_ec2_idx = number
 		nic_attachment_nic_idx = number
@@ -106,8 +106,8 @@ variable "ebs_attachment" {
 	type = map(object({
 		force_detach = bool
 		device_name = string
-		ebs_id = any
-		ebs_ec2_id = any
+		ebs_id = module.ec2.ebs_id
+		ebs_ec2_id = module.ec2.ec2_id
 		ebs_attachment_ebs_idx = number
 		ebs_attachment_ec2_idx = number
 	}))
