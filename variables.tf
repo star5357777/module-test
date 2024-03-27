@@ -55,3 +55,27 @@ variable "sg_rule" {
     source_sg_id = optional(string)
   }))
 }
+
+variable "ami" {
+  type = string
+}
+
+variable "az" {
+  type = string
+}
+
+variable "ec2_type" {
+  type = string
+}
+
+variable "key_name" {
+  type = string
+}
+
+variable "sg_id" {
+  type = string
+}
+
+variable "subnet_id" {
+  type = string
+}
