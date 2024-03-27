@@ -51,12 +51,9 @@ module "ec2" {
   source  = "app.terraform.io/Enterprise_Test/ec2/aws"
   version = "1.0.0"
   # insert required variables here
-  ami = var.ami
-  az = var.az
-  ec2_name = var.ec2_name
-  ec2_type = var.ec2_type
-  key_name = var.key_name
-  sg_id = module.security-group.sg_id
-  subnet_module = module.subnets.subnet_id
-  subnet_number = var.subnet_number
+  nic_info = var.nic_info
+  ebs_info = var.ebs_info
+  ec2 = var.ec2
+  nic_attachment_info = var.nic_attachment_info
+  ebs_attachment_info = var.ebs_attachment_info
 }
